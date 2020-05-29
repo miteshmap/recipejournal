@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "tags": {
+      "type": "string",
+      "required": true
+    },
+    "tag_recipes": {
+      "via": "tags",
+      "collection": "recipe"
+    }
+  }
+}

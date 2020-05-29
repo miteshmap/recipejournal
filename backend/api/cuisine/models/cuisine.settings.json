@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuisines",
+  "info": {
+    "name": "cuisine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "cuisine_recipes": {
+      "via": "cuisines",
+      "model": "recipe"
+    }
+  }
+}

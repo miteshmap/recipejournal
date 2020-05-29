@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kitchen-appliances",
+      "handler": "kitchen-appliances.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kitchen-appliances/count",
+      "handler": "kitchen-appliances.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kitchen-appliances/:id",
+      "handler": "kitchen-appliances.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kitchen-appliances",
+      "handler": "kitchen-appliances.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kitchen-appliances/:id",
+      "handler": "kitchen-appliances.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kitchen-appliances/:id",
+      "handler": "kitchen-appliances.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

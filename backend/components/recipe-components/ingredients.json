@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_ingredients_ingredients",
+  "info": {
+    "name": "Ingredients",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "quantity": {
+      "type": "string",
+      "required": true
+    },
+    "ingredient": {
+      "model": "ingredient"
+    }
+  }
+}

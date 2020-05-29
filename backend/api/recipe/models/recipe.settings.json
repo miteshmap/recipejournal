@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "name": "Recipe"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "breakfast",
+        "brunch",
+        "lunch",
+        "dinner",
+        "snack",
+        "sauce",
+        "side_dish"
+      ]
+    },
+    "ingredients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recipe-components.ingredients"
+    },
+    "kitchenware": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recipe-components.kitchen-appliances"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "recipes"
+    },
+    "sub_recipes": {
+      "collection": "recipe",
+      "via": "parent_recipes",
+      "dominant": true
+    },
+    "parent_recipes": {
+      "collection": "recipe",
+      "via": "sub_recipes"
+    },
+    "public": {
+      "type": "boolean"
+    },
+    "steps": {
+      "type": "richtext"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "tag_recipes",
+      "dominant": true
+    },
+    "introduction": {
+      "type": "richtext"
+    },
+    "cuisines": {
+      "collection": "cuisine",
+      "via": "cuisine_recipes"
+    },
+    "nutrition_facts": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "publish",
+        "archive"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    }
+  }
+}

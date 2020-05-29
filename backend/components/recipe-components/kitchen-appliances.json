@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_recipe_components_kitchen_appliances",
+  "info": {
+    "name": "Kitchen Appliances",
+    "icon": "th-list"
+  },
+  "options": {},
+  "attributes": {
+    "quantity": {
+      "type": "string"
+    },
+    "kitchen_appliance": {
+      "model": "kitchen-appliances"
+    }
+  }
+}
