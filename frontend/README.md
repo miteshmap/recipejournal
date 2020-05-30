@@ -1,6 +1,6 @@
-# recipe-book
+# recipejournal
 
-> A recipe book project
+> my recipe journal
 
 ## Build Setup
 

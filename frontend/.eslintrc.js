@@ -4,8 +4,11 @@ module.exports = {
     browser: true,
     node: true
   },
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
+    '@nuxtjs',
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
@@ -15,7 +18,10 @@ module.exports = {
     'prettier'
   ],
   settings: {
-    'import/resolver': nuxt
+    'import/resolver': {}
+  },
+  globals: {
+    $nuxt: true
   },
   // add your custom rules here
   rules: {

@@ -1,22 +1,18 @@
 <template>
-  <div>
+  <fragment>
     <Header />
-    <main>
-      <div
-        class="relative pt-16 pb-32 flex content-center items-center justify-center"
-        style="min-height: 75vh;"
-      >
-        <nuxt />
-      </div>
-    </main>
-  </div>
+    <nuxt />
+    <Footer />
+  </fragment>
 </template>
 <script>
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>

@@ -1,0 +1,51 @@
+// // Then include the following
+@import './colors.scss';
+// @import 'bootstrap-vue/src/index.scss';
+
+footer {
+  background-color: $site-black-color;
+  p {
+    color: $site-gray-in-black-color;
+  }
+
+  .post {
+    .post-info {
+      .post-title a {
+        color: var(--white);
+        font-size: 13px;
+        margin-botton: 2px;
+
+        &:hover {
+          color: $site-green-color;
+        }
+      }
+
+      .post-date {
+        display: inline-block;
+        color: var(--white);
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .social-links {
+    li {
+      a {
+        font-size: 1.25rem;
+        width: 50px;
+        height: 50px;
+        background: $site-gray-in-gray-color;
+        border: solid 2px $site-gray-in-black-color;
+        color: $site-gray-in-black-color;
+
+        &:hover {
+          background: $site-green-color;
+          border-color: $site-green-color;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
