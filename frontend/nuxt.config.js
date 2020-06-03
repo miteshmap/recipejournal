@@ -53,12 +53,13 @@ export default {
     scss: ['@/assets/scss/*.scss']
   },
   bootstrapVue: {
-    icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
+    icons: false // Install the IconsPlugin (in addition to BootStrapVue plugin
   },
   fontawesome: {
     component: 'fa',
     suffix: true,
     icons: {
+      solid: true,
       brands: [
         'faFacebook',
         'faTwitter',

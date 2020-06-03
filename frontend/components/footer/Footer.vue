@@ -180,6 +180,7 @@
     </b-container>
   </footer>
 </template>
+
 <script>
 export default {
   data() {

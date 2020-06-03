@@ -1,6 +1,7 @@
 <template>
   <section class="lg-mt-0">
     <b-container>
+      <Search />
       <logo />
       <h1 class="title">
         Recipe journal
@@ -26,10 +27,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Search from '~/components/content/search-panel.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Search
   }
 }
 </script>
