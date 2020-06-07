@@ -1,5 +1,3 @@
-'use strict';
-
 const slugify = require('slugify');
 
 /**
@@ -8,13 +6,11 @@ const slugify = require('slugify');
  */
 
 module.exports = {
-  beforeSave: async (model, attrs, options) => {
-    console.log(options.method);
-    console.log(attrs.title);
-    if (options.method === 'insert' && attrs.title) {
-      model.set('slug', slugify(attrs.title));
-    } else if (options.method === 'update' && attrs.title) {
-      attrs.slug = slugify(attrs.title);
-    }
-  },
+  lifecycles: {
+    async beforeUpdate(param, data) {
+      if (data.title) {
+        data.slug = slugify(data.title, {lower: true});
+      }
+    },
+  }
 };
